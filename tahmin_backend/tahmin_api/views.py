@@ -9,8 +9,9 @@ class LoginPredictionMixin:
 
     @staticmethod
     def parse_iso(ts: str) -> datetime.date:
-        # Accepts '2025-04-01T04:47:00Z' → returns timezone-aware datetime
-        return datetime.fromisoformat(ts.replace('Z', '+00:00'))
+        # Accepts '2025-04-01T04:47:00Z'
+        return datetime.fromisoformat(ts)
+    
 
     def predict_next_mean_interval(self, logins: list[str]) -> datetime.date:
         """Algorithm 1: Add the average inter-login interval to last login."""
@@ -52,16 +53,16 @@ class LoginPredictionView(LoginPredictionMixin, View):
             if not logins:
                 continue
             
-            last_login = logins[-1]
-            pred_mean = self.predict_next_mean_interval(logins)
-            pred_exsm = self.predict_next_exponential_smoothing(logins)
+            last_login = datetime.fromisoformat(logins[-1]).strftime("%d.%m.%Y %H:%M:%S")
+            pred_mean = datetime.fromisoformat(str(self.predict_next_mean_interval(logins))).strftime("%d.%m.%Y %H:%M:%S")
+            pred_exsm = datetime.fromisoformat(str(self.predict_next_exponential_smoothing(logins))).strftime("%d.%m.%Y %H:%M:%S")
             
             results.append({
                 "user_id": self.only_numerics(user["id"]),
                 "user_name": user["name"],
                 "last_login": last_login,
-                "predicted_next_mean": pred_mean.isoformat(),
-                "predicted_next_exsm": pred_exsm.isoformat()
+                "predicted_next_mean": pred_mean,
+                "predicted_next_exsm": pred_exsm
             })
         
         return JsonResponse(results, safe=False, status=200)
