@@ -1,5 +1,5 @@
 # Humanas Login Tahmin Web Application
-Bu repo, Humanas için hazırlanmış bir kullanıcı giriş tahmin web uygulamasına aittir. Uygulama backend için Python Django, frontend için React.js frameworklerini kullanmaktadır. İki farklı algoritma ile (mean interval ve exponential smoothing) sonraki kullanıcı giriş tarihini tahmin etmeye çalışır.
+Bu repo, Humanas için hazırlanmış bir kullanıcı giriş tahmin web uygulamasına aittir. Uygulama backend için Python Django, frontend için React.js frameworklerini kullanmaktadır. İki farklı algoritma ile (mean interval ve median interval) sonraki kullanıcı giriş tarihini tahmin etmeye çalışır. Ayrıca bir arama fonksiyonu ile verinin fazla büyümesi durumunda kullanıcıya kolaylık sağlar.
 ## Kurulum
 ### Backend Kurulumu
 Terminalde yazmanız gerekenler:
@@ -28,11 +28,24 @@ pip install -r requirements.txt
 ```
 python manage.py migrate
 ```
+#### .env dosyası ile kendi environment variable'larınızı tanımlamalısınız.
+Aşağıdaki bir örnek .env dosyasıdır.
+```
+SECRET_KEY =<django_secret_keyiniz>
+DEBUG=True
+REACT_APP_URL=http://localhost:5173
+```
+Kendi django key'inizi elde etmek için terminalde
+```
+django-admin shell
+from django.core.management.utils import get_random_secret_key  
+get_random_secret_key()
+```
+Komutlarını kullanarak hızlıca bir Django key'i elde edebilirsiniz.
 #### Backend'i çalıştırmak için:
 ```
 python manage.py runserver
 ```
-### .env dosyası ile kendi environment variable'larınızı tanımlamalısınız.
 
 ### Frontend Kurulumu
 #### Frontend dizinine geçin veya halen backend klasöründe iseniz aşağıdaki komutu çalıştırın:
@@ -43,7 +56,7 @@ cd ../tahmin_frontend
 ```
 npm install
 ```
-#### Frontend sunucusu çalıştırma (geliştirme için):
+#### Frontend sunucusu çalıştırma:
 ```
 npm run dev
 ```

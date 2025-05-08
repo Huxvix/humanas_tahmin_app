@@ -2,7 +2,6 @@ from django.views import View
 from django.http import JsonResponse
 from tahmin_api.services.api_client import fetch_login_rows
 from tahmin_api.services.prediction_service import predict_for_user
-from rest_framework.exceptions import ValidationError
 
 class LoginPredictionView(View):
     def get(self, request, *args, **kwargs):

@@ -1,5 +1,5 @@
 from statistics import mean
-from datetime import datetime, timedelta
+from datetime import timedelta
 from tahmin_api.utils.parsing import parse_iso
 import numpy as np
 
