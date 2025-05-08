@@ -25,7 +25,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 ```diff
--# .env dosyası ile kendi environment variable'larınızı tanımlamalısınız.
+-.env dosyası ile kendi environment variable'larınızı tanımlamalısınız.
 ```
 #### Migrasyonları tamamlamak için:
 ```
