@@ -38,8 +38,8 @@ tr:hover {
 /* Telefon için tasarım */
 @media screen and (max-width: 768px) {
   table {
-    font-size: 14px;
-    min-width: auto;
+    font-size: 11px;
+    min-width: 640px;
     display: block;
     white-space: wrap;
     -webkit-overflow-scrolling: touch;
@@ -50,5 +50,6 @@ tr:hover {
     font-size: 11px;
     white-space: nowrap;
     width: auto;
+    word-break: break-word;
   }
 }
