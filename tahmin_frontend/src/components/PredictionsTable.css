@@ -1,41 +1,55 @@
-/* General Table Styles */
 table {
   width: 100%;
   min-width: 500px;
-  table-layout: fixed; /* Ensures the layout is stable */
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
-td, th {
+th, td {
   width: 25%;
-  word-wrap: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 12px 8px;
   text-align: center;
   vertical-align: middle;
-  padding: 10px; /* Add padding for better spacing */
-  font-size: 16px; /* Base font size */
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  border-bottom: 1px solid #eee;
 }
 
-/* Responsive Design */
+td {
+  font-size: 16px;
+}
+
+th {
+  background-color: #f4f6f8;
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Telefon için tasarım */
 @media screen and (max-width: 768px) {
-  /* Scale down the table and content on small screens */
   table {
-    font-size: 14px; /* Reduce font size for mobile devices */
-    padding: 5px; /* Reduce padding to save space */
+    font-size: 14px;
+    min-width: unset;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
-  td, th {
-    padding: 5px; /* Make padding smaller */
-  }
-
-  /* Optional: Reduce column width on small screens */
-  td, th {
-    width: auto; /* Allow columns to shrink */
-  }
-
-  /* Make sure the table takes less space without breaking */
-  table {
-    width: 100%; /* Keep the table at full width */
-    overflow-x: auto; /* Add horizontal scrolling if needed */
+  th, td {
+    padding: 8px 6px;
+    font-size: 11px;
+    white-space: nowrap;
+    width: auto;
   }
 }
