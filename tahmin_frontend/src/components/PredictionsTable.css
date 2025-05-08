@@ -58,7 +58,7 @@ td:nth-child(2) {
   }
 
   th, td {
-    padding: 2px 4px;
+    padding: 2px;
     font-size: 11px;
     width: auto;
     word-break: break-word;
