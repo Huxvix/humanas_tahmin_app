@@ -59,7 +59,7 @@ npm install
 #### .env dosyası ile kendi environment variable'ınızı tanımlamalısınız.
 Aşağıdaki, frontend'i kendi bilgisayarınızda çalıştırmanız için yeterli olacaktır.
 ```
-VITE_API_BASE_URL=http://localhost:5173/
+VITE_API_BASE_URL=http://127.0.0.1:8000/
 ```
 #### Frontend sunucusu çalıştırma:
 ```
