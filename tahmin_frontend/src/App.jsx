@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar';
 import PredictionsTable from './components/PredictionsTable';
 import 'bootstrap/dist/css/bootstrap.css';
 import LoadingScreen from './components/LoadingScreen';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 export default function App() {
   const { data, loading, error } = useLoginData();
@@ -23,6 +24,9 @@ export default function App() {
 
   return (
     <div className="container mx-auto p-4">
+      
+      <ScrollToTopButton />
+
       <h1 className="text-2xl font-bold mb-4 text-center">Login Tahminleri</h1>
 
       <SearchBar
