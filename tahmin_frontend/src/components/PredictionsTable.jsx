@@ -5,8 +5,9 @@ import './PredictionsTable.css';
 
 function PredictionsTable({ data }) {
   return (
-    <div className="overflow-x-auto mx-auto">
-      <table className="table table-bordered table-sm table-striped table-hover table-fixed">
+    <div className="overflow-x-auto mx-auto w-full px-2 sm:px-4">
+      <table
+        className="table-fixed w-fulltext-xs sm:text-sm md:text-base table-striped table-hover table-bordered">
         <TableHeader />
         <TableBody data={data} />
       </table>
