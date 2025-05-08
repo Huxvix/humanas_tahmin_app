@@ -35,6 +35,13 @@ tr:hover {
   background-color: #f9f9f9;
 }
 
+th:first-child,
+td:first-child {
+  width: 10%;
+  max-width: 100px;
+  white-space: nowrap;
+}
+
 /* Telefon için tasarım */
 @media screen and (max-width: 768px) {
   table {
@@ -50,4 +57,11 @@ tr:hover {
     width: auto;
     word-break: break-word;
   }
+
+  th:first-child,
+  td:first-child {
+  width: 10%;
+  max-width: 100px;
+  white-space: nowrap;
+}
 }
