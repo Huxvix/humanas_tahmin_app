@@ -8,7 +8,7 @@ export default function App() {
   const { data, loading, error } = useLoginData();
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter logic
+  // Arama terimini kullanarak verileri filtreleme lojiği
   const filteredData = data.filter(user => {
     const term = searchTerm.toLowerCase();
     return (

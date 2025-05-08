@@ -31,19 +31,6 @@ def predict_for_user(user: dict) -> dict:
         "predicted_next_median": next_median.strftime("%d.%m.%Y %H:%M:%S"),
     }
 
+# sadece sayılardan oluşan bir string döndürür
 def only_numerics(s: str) -> str:
     return "".join(filter(str.isdigit, s))
-
-def predict_next_volatility(intervals, alpha_min=0.1, alpha_max=0.9, window=5):
-    if not intervals:
-        return 0
-    s = intervals[0]
-    for i, interval in enumerate(intervals[1:], start=1):
-        # 
-        recent = intervals[max(0, i-window):i]
-        volatility = np.std(recent) if recent else 0
-        # Normalize et (örneğin max volatility’yi öngör)
-        norm_vol = min(1, volatility / (np.mean(intervals) + 1e-6))
-        alpha = alpha_min + (alpha_max - alpha_min) * norm_vol
-        s = alpha * interval + (1 - alpha) * s
-    return s
