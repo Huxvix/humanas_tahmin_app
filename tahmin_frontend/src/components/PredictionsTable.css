@@ -1,11 +1,13 @@
-.table-fixed {
-    table-layout: fixed;
-    
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
   
-  .table th, .table td {
+  td, th {
     width: 25%;
     word-wrap: break-word;
+    font-size: 4px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
