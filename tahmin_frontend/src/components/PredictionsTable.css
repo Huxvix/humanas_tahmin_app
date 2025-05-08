@@ -52,7 +52,7 @@ td:nth-child(2) {
 @media screen and (max-width: 768px) {
   table {
     font-size: 11px;
-    min-width: 460px;
+    min-width: 480px;
     display: block;
     -webkit-overflow-scrolling: touch;
   }
