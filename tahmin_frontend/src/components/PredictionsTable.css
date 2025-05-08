@@ -1,9 +1,9 @@
-table {
-  width: 100%;
-  table-layout: fixed;
-}
+.table-fixed {
+    table-layout: fixed;
+    width: 100%;
+  }
   
-  td, th {
+  .table th, .table td {
     width: 25%;
     word-wrap: break-word;
     overflow: hidden;
@@ -12,37 +12,6 @@ table {
     vertical-align: middle;
   }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  table {
-    table-layout: auto; /* Allow columns to adjust based on content */
+  .table td {
+    white-space: normal;
   }
-
-  td, th {
-    width: auto; /* Let cells expand to fit content */
-    display: block; /* Stack cells vertically */
-    text-align: left; /* Align text to the left for better readability */
-  }
-
-  th {
-    font-weight: bold;
-  }
-
-  tr {
-    display: block;
-    margin-bottom: 15px; /* Add some space between rows */
-  }
-
-  td {
-    text-align: left;
-    padding-left: 10px;
-  }
-
-  td:before {
-    content: attr(data-label); /* Add labels to each cell */
-    font-weight: bold;
-    padding-right: 10px;
-    display: inline-block;
-    width: 100px; /* Set a fixed width for labels */
-  }
-}
