@@ -24,7 +24,9 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-#### Ayrıca .env.example dosyasının sonundaki ".example" kısmını silip, kendi ortam değişkenlerinizi girebilirsiniz.
+```diff
+-# .env dosyası ile kendi environment variable'larınızı tanımlamalısınız.
+```
 #### Migrasyonları tamamlamak için:
 ```
 python manage.py migrate
