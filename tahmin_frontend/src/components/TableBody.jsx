@@ -15,11 +15,11 @@ function TableBody({ data }) {
   }
 
   return (
-    <td className='px-1 py-0.5 sm:px-2 sm:py-1'> 
+    <tbody>
       {data.map(user => (
         <TableRow key={user.user_id} user={user} />
       ))}
-    </td>
+    </tbody>
   );
 }
 

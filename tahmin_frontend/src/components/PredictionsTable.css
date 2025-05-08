@@ -1,6 +1,7 @@
 /* General Table Styles */
 table {
   width: 100%;
+  min-width: 500px;
   table-layout: fixed; /* Ensures the layout is stable */
 }
 
