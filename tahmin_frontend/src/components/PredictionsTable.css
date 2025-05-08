@@ -42,11 +42,18 @@ td:first-child {
   white-space: nowrap;
 }
 
+th:nth-child(2),
+td:nth-child(2) {
+  width: 17%;
+  max-width: 150px;
+}
+
 /* Telefon için tasarım */
 @media screen and (max-width: 768px) {
   table {
+    width: 70%;
     font-size: 11px;
-    min-width: 640px;
+    min-width: 300px;
     display: block;
     -webkit-overflow-scrolling: touch;
   }
