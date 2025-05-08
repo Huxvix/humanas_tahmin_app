@@ -12,7 +12,7 @@ function TableHeader() {
       <thead>
         <tr className="bg-gray-200">
           {headers.map((text, idx) => (
-            <th key={idx} className="py-2 px-4">
+            <th key={idx} className="px-1 py-0.5 sm:px-2 sm:py-1">
               {text}
             </th>
           ))}
