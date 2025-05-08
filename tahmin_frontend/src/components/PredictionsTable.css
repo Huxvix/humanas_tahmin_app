@@ -5,8 +5,8 @@ table {
 }
   
   td, th {
+    width: 25%;
     word-wrap: break-word;
-    font-size: 4px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
