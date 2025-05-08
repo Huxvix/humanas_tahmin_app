@@ -10,9 +10,9 @@ function TableHeader() {
     ];
     return (
       <thead>
-        <tr className="bg-gray-200">
+        <tr className="bg-gray-100 divide-x divide-gray-200">
           {headers.map((text, idx) => (
-            <th key={idx} className="px-1 py-0.5 sm:px-2 sm:py-1 text-center vertical-align-middle">
+            <th key={idx} className="px-1 py-0.5 sm:px-2 text-center align-middle">
               {text}
             </th>
           ))}
