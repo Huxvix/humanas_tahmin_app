@@ -57,7 +57,7 @@ cd ../tahmin_frontend
 npm install
 ```
 #### .env dosyası ile kendi environment variable'ınızı tanımlamalısınız.
-Aşağıdaki, frontend'i kendi bilgisayarınızda çalıştırmanız için yeterli olacaktır.
+Aşağıdaki, frontend'i kendi bilgisayarınızda çalıştırmanız ve API'ı lokal olarak kullanmanız için yeterli olacaktır.
 ```
 VITE_API_BASE_URL=http://127.0.0.1:8000/
 ```
