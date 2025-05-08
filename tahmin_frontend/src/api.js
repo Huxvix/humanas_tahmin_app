@@ -1,10 +1,8 @@
 import axios from 'axios';
-import.meta.env.BASE_URL;
-
-const baseURL = `${BASE_URL}`
+import.meta.env.VITE_API_BASE_URL;
 
 const AxiosInstance = axios.create({
-    baseURL: baseURL,
+    baseURL: import.meta.env.VITE_API_BASE_URL,
     timeout: 52000, // 52 saniye sonra zaman aşımına uğrayacak (bunu bu kadar uzun tutmamın sebebi render'in bazen çok uzun bekletmesi)
     headers: {
         'Content-Type': 'application/json',
