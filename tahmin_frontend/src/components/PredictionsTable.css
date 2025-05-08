@@ -41,14 +41,12 @@ tr:hover {
     font-size: 11px;
     min-width: 640px;
     display: block;
-    white-space: wrap;
     -webkit-overflow-scrolling: touch;
   }
 
   th, td {
     padding: 8px 6px;
     font-size: 11px;
-    white-space: nowrap;
     width: auto;
     word-break: break-word;
   }
