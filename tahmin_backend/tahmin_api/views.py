@@ -11,10 +11,10 @@ class LoginPredictionView(View):
         except Exception as e:
             return JsonResponse(
                 {"error": str(e)},
-                status=502  # Bad Gateway hatası
+                status=502
             )
 
-        # kullanıcı için algoritmaları çalıştır
+        # her kullanıcı için algoritmaları çalıştır
         results = [predict_for_user(u) for u in rows]
 
         return JsonResponse(results, safe=False, status=200)

@@ -16,10 +16,19 @@ def predict_for_user(user: dict) -> dict:
                  for t1, t2 in zip(times, times[1:])]
 
     # 1) mean interval algoritması
+    """
+    mean interval algoritmasındaki bütün loginler arasındaki sürelerin ortalamasını alıyoruz ve son login zamanına bunu ekleyerek tahmin edilen
+    sonraki login zamanını elde ediyoruz.
+    """
     avg = mean(intervals) # loginler arasındaki ortalama süreyi hesapla
     next_mean = times[-1] + timedelta(seconds=avg) # son login zamanına ortalama süreyi ekle
 
     # 2) median interval algoritması
+    """
+    median interval algoritmasında ise, loginler arasındaki sürelerin medyanını yani tam ortadaki değeri alıyoruz.
+    mean interval yöntemine göre çok büyük dalgalanmalara karşı daha dayanıklı olan bu yöntemde örneğin kullanıcı her gün girdikten sonra 3 gün boyunca girmezse,
+    yine 1 gün sonra girecek gibi bir tahmin yapılır.
+    """
     avg = np.median(intervals) # loginler arasındaki ortalama süreyi hesapla
     next_median = times[-1] + timedelta(seconds=avg) # son login zamanına ortalama süreyi ekle
 
