@@ -42,7 +42,7 @@ tr:hover {
     min-width: unset;
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: wrap;
     -webkit-overflow-scrolling: touch;
   }
 
