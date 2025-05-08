@@ -1,12 +1,11 @@
 import React from 'react';
 import TableHeader from './TableHeader';
 import TableBody from './TableBody';
-import './PredictionsTable.css'; 
 
 function PredictionsTable({ data }) {
   return (
-    <div className="overflow-x-auto mx-auto w-full">
-      <table className="table table-bordered table-sm table-striped table-hover table-fixed">
+    <div className="w-full overflow-x-auto border border-gray-200 rounded-lg shadow-sm">
+      <table className="min-w-[600px] w-full table-auto border-collapse bg-white shadow-sm">
         <TableHeader />
         <TableBody data={data} />
       </table>
