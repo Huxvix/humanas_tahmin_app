@@ -1,0 +1,17 @@
+.table-fixed {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .table th, .table td {
+    width: 25%;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .table td {
+    white-space: normal;
+  }

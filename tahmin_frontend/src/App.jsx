@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useLoginData from './hooks/useLoginData';
 import SearchBar from './components/SearchBar';
 import PredictionsTable from './components/PredictionsTable';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default function App() {
   const { data, loading, error } = useLoginData();
@@ -16,12 +17,12 @@ export default function App() {
     );
   });
 
-  if (loading) return <p className="p-4 text-center">Loading...</p>;
+  if (loading) return <p className="p-4 text-center">Yükleniyor...</p>;
   if (error)   return <p className="p-4 text-red-500 text-center">Error: {error.message || error}</p>;
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 text-center">Login Predictions</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Login Tahminleri</h1>
 
       <SearchBar
         value={searchTerm}
