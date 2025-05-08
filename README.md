@@ -24,9 +24,6 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-```diff
--.env dosyası ile kendi environment variable'larınızı tanımlamalısınız.
-```
 #### Migrasyonları tamamlamak için:
 ```
 python manage.py migrate
@@ -35,6 +32,7 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+### .env dosyası ile kendi environment variable'larınızı tanımlamalısınız.
 
 ### Frontend Kurulumu
 #### Frontend dizinine geçin veya halen backend klasöründe iseniz aşağıdaki komutu çalıştırın:
