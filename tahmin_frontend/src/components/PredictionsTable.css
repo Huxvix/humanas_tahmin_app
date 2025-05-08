@@ -51,9 +51,8 @@ td:nth-child(2) {
 /* Telefon için tasarım */
 @media screen and (max-width: 768px) {
   table {
-    width: 70%;
     font-size: 11px;
-    min-width: 300px;
+    min-width: 560px;
     display: block;
     -webkit-overflow-scrolling: touch;
   }
