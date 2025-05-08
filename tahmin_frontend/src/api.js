@@ -5,7 +5,7 @@ const baseURL = 'https://humanas-tahmin-app-backend.onrender.com/'; // Kendi bac
 
 const AxiosInstance = axios.create({
     baseURL: baseURL,
-    timeout: 5000,
+    timeout: 52000, // 52 saniye sonra zaman aşımına uğrayacak (bunu bu kadar uzun tutmamın sebebi render'in bazen çok uzun bekletmesi)
     headers: {
         'Content-Type': 'application/json',
         accept: 'application/json',
