@@ -1,17 +1,40 @@
-.table-fixed {
-    table-layout: fixed;
-    width: 100%;
-  }
-  
-  .table th, .table td {
-    width: 25%;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    vertical-align: middle;
+/* General Table Styles */
+table {
+  width: 100%;
+  table-layout: fixed; /* Ensures the layout is stable */
+}
+
+td, th {
+  width: 25%;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px; /* Add padding for better spacing */
+  font-size: 16px; /* Base font size */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Scale down the table and content on small screens */
+  table {
+    font-size: 14px; /* Reduce font size for mobile devices */
+    padding: 5px; /* Reduce padding to save space */
   }
 
-  .table td {
-    white-space: normal;
+  td, th {
+    padding: 5px; /* Make padding smaller */
   }
+
+  /* Optional: Reduce column width on small screens */
+  td, th {
+    width: auto; /* Allow columns to shrink */
+  }
+
+  /* Make sure the table takes less space without breaking */
+  table {
+    width: 100%; /* Keep the table at full width */
+    overflow-x: auto; /* Add horizontal scrolling if needed */
+  }
+}
