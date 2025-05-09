@@ -1,5 +1,5 @@
 # Humanas Login Tahmin Web Application
-Bu repo, Humanas için hazırlanmış bir kullanıcı giriş tahmin web uygulamasına aittir. Uygulama backend için Python Django, frontend için React Vite frameworklerini kullanmaktadır. İki farklı algoritma ile (mean interval ve median interval) sonraki kullanıcı giriş tarihini tahmin etmeye çalışır. Ayrıca bir arama fonksiyonu ile verinin fazla büyümesi durumunda kullanıcıya kolaylık sağlar.
+Bu repo, Humanas için hazırlanmış bir kullanıcı giriş tahmin web uygulamasına aittir. Uygulama backend için Python Django, frontend için React Vite frameworklerini kullanmaktadır. İki farklı algoritma ile (mean interval ve median interval) sonraki kullanıcı giriş tarihini tahmin etmeye çalışır. Ayrıca bir arama fonksiyonu ile verinin fazla büyümesi durumunda kullanıcıya kolaylık sağlar. Tailwind CSS ile de modern ve şık bir görünüm sağlanmıştır.
 ## Kurulum
 ### Backend Kurulumu
 Terminalde yazmanız gerekenler:
@@ -57,11 +57,17 @@ cd ../tahmin_frontend
 npm install
 ```
 #### .env dosyası ile kendi environment variable'ınızı tanımlamalısınız.
-Aşağıdaki, frontend'i kendi bilgisayarınızda çalıştırmanız için yeterli olacaktır.
+Aşağıdaki, frontend'i kendi bilgisayarınızda çalıştırmanız ve API'ı lokal olarak kullanmanız için yeterli olacaktır.
 ```
-VITE_API_BASE_URL=http://localhost:5173/
+VITE_API_BASE_URL=http://127.0.0.1:8000/
 ```
 #### Frontend sunucusu çalıştırma:
 ```
 npm run dev
 ```
+## İleride geliştirilebilecek özellikler
+* Django REST Framework'ün pagination özelliği ile çok büyük veri setlerini tek seferde yüklemeden parça parça çekmek için optimizasyon
+* Bir veritabanı kullanarak çekilen verilerin depolanması, frontend'deki search fonksiyonunun direkt backend'e erişmesi. Bu sayede büyük veri setlerinde arama optimizasyonu elde edilecektir.
+* Tablo içerisinde loading/placeholder elementleri ile büyük veri setlerinde arama gerçekleştirilirken UI/UX iyileştirilmesi.
+* Frontend'in daha da kullanıcı dostu ve şık tasarımı.
+
