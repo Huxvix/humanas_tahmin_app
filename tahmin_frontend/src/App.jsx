@@ -24,8 +24,6 @@ export default function App() {
 
   return (
     <div className="container mx-auto p-4">
-      
-      <ScrollToTopButton />
 
       <h1 className="text-2xl font-bold mb-4 text-center">Login Tahminleri</h1>
 
@@ -35,6 +33,9 @@ export default function App() {
       />
 
       <PredictionsTable data={filteredData} />
+
+      <ScrollToTopButton />
+      
     </div>
   );
 }

@@ -22,7 +22,7 @@ function ScrollToTopButton() {
     <button
         onClick={scrollToTop}
         className="
-            fixed top-8 left-8 
+            fixed bottom-8 right-8 
             w-12 h-12 
             bg-blue-600 text-white 
             rounded-full shadow-lg 
