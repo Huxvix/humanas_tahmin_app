@@ -65,3 +65,9 @@ VITE_API_BASE_URL=http://127.0.0.1:8000/
 ```
 npm run dev
 ```
+## İleride geliştirilebilecek özellikler
+* Django REST Framework'ün pagination özelliği ile çok büyük veri setlerini tek seferde yüklemeden parça parça çekmek için optimizasyon
+* Bir veritabanı kullanarak çekilen verilerin depolanması, frontend'deki search fonksiyonunun direkt backend'e erişmesi. Bu sayede büyük veri setlerinde arama optimizasyonu elde edilecektir.
+* Tablo içerisinde loading/placeholder elementleri ile büyük veri setlerinde arama gerçekleştirilirken UI/UX iyileştirilmesi.
+* Frontend'in daha da kullanıcı dostu ve şık tasarımı.
+
